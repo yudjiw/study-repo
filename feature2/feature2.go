@@ -1,4 +1,4 @@
-package feature_2
+package feature2
 
 import "fmt"
 
