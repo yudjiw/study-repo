@@ -1,16 +1,26 @@
 package main
 
 import (
-	"Study/feature1"
-	"Study/feature2"
 	"Study/feature_postgres/simple_connection"
+	"Study/feature_postgres/simple_sql"
+	"context"
 	"fmt"
 )
 
 func main() {
-	fmt.Println("Hello Git")
-	feature1.Feature1()
+	ctx := context.Background()
 
-	feature2.Feature2()
-	simple_connection.CheckConnection()
+	conn, err := simple_connection.CreateConnection(ctx)
+	if err != nil {
+		panic(err)
+	}
+	if err := simple_sql.CreateTable(ctx, conn); err != nil {
+		panic(err)
+	}
+
+	if err := simple_sql.InsertRow(ctx, conn); err != nil {
+		panic(err)
+	}
+
+	fmt.Println("succeed")
 }
