@@ -5,6 +5,7 @@ import (
 	"Study/feature_postgres/simple_sql"
 	"context"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -18,7 +19,18 @@ func main() {
 		panic(err)
 	}
 
-	if err := simple_sql.InsertRow(ctx, conn); err != nil {
+	if err := simple_sql.InsertRow(
+		ctx,
+		conn,
+		"lunch",
+		"eat",
+		false,
+		time.Now(),
+	); err != nil {
+		panic(err)
+	}
+
+	if err := simple_sql.UpdateRow(ctx, conn); err != nil {
 		panic(err)
 	}
 
