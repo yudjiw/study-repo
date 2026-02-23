@@ -2,7 +2,9 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/feature_postgres/simple_sql/simple_create_table.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/feature_postgres/simple_sql/simple_delete.go" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/feature_postgres/simple_sql/simple_insert.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/feature_postgres/simple_sql/simple_select.go" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/feature_postgres/simple_sql/simple_update.go" dialect="GenericSQL" />
   </component>
 </project>
