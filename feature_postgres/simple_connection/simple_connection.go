@@ -8,6 +8,6 @@ import (
 
 func CreateConnection(ctx context.Context) (*pgx.Conn, error) {
 
-	return pgx.Connect(ctx, "postgres://postgres:12345678@localhost:5432/postgres")
+	return pgx.Connect(ctx, "postgres://postgres:1234@localhost:5433/postgres")
 
 }
