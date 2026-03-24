@@ -44,4 +44,5 @@ func main() {
 	}
 
 	fmt.Println("succeed!")
+	fmt.Println("Андрей кармашки в какашках")
 }
